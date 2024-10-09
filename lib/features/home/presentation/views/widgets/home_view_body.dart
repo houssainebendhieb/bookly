@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/style.dart';
+import 'package:bookly/features/home/presentation/views/widgets/best_seller_item.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_navbar.dart';
 import 'package:bookly/features/home/presentation/views/widgets/feature_list_item.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +10,15 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomAppBar(),
         FeatureBooksListView(),
-        const SizedBox(
+        SizedBox(
           height: 50,
         ),
-        Text("best seller ", style: Styles.titleMeduim),
+        Text("Best Seller", style: Styles.textStyle18),
+        BestSellerItemList(),
       ],
     );
   }
