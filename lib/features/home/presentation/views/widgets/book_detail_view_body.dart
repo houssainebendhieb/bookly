@@ -1,8 +1,9 @@
 import 'package:bookly/core/utils/style.dart';
+import 'package:bookly/features/home/presentation/views/widgets/book_action.dart';
 import 'package:bookly/features/home/presentation/views/widgets/bookrating.dart';
+import 'package:bookly/features/home/presentation/views/widgets/custom_appbar_book_detail.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_item_list.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class BookDetailViewBody extends StatelessWidget {
   const BookDetailViewBody({super.key});
@@ -39,31 +40,10 @@ class BookDetailViewBody extends StatelessWidget {
           ),
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
-          )
+          ),
+          const BookAction(),
         ],
       ),
-    );
-  }
-}
-
-class CustomAppBarBookDetail extends StatelessWidget {
-  const CustomAppBarBookDetail({super.key});
-
-  Widget build(context) {
-    return Row(
-      children: [
-        IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
-        ),
-        const Spacer(),
-        IconButton(
-          icon: const Icon(Icons.shopping_cart),
-          onPressed: () {},
-        )
-      ],
     );
   }
 }
