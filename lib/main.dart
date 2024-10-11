@@ -3,11 +3,11 @@ import 'package:bookly/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BooklyApp());
+  runApp(const BooklyApp());
 }
 
 class BooklyApp extends StatelessWidget {
-  BooklyApp({super.key});
+ const  BooklyApp({super.key});
 
   Widget build(context) {
     return MaterialApp.router(

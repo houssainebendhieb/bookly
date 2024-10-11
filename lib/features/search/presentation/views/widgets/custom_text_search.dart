@@ -9,8 +9,8 @@ class CustomSearchTextField extends StatelessWidget {
           enabledBorder:
               OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           hintText: 'Search',
-          suffixIcon:
-              IconButton(icon:const  Icon(Icons.search, size: 22), onPressed: () {})),
+          suffixIcon: IconButton(
+              icon: const Icon(Icons.search, size: 22), onPressed: () {})),
     );
   }
 }
