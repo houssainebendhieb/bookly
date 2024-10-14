@@ -23,6 +23,8 @@ class HomeRepoImp implements HomeRepo {
       return right(books);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
     }
   }
 
@@ -39,6 +41,8 @@ class HomeRepoImp implements HomeRepo {
       return right(books);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
     }
   }
 }

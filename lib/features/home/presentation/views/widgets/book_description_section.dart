@@ -12,7 +12,7 @@ class BookDescriptionSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.15),
-          child: const CustomListViewItem(),
+          child: const CustomListViewItem(imageUrl: "fjskl"),
         ),
         const SizedBox(
           height: 43,

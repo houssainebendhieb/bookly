@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  setup();
   runApp(const BooklyApp());
 }
 
@@ -19,7 +20,7 @@ class BooklyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeatureBooksCubit(homeRepo: getIt.get<HomeRepoImp>()),
+              FeatureBooksCubit(homeRepo: getIt.get<HomeRepoImp>())..fetchFeatureBook(),
         ),
         BlocProvider(
           create: (context) => NewsetBooksCubit(getIt.get<HomeRepoImp>()),
