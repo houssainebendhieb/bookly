@@ -17,8 +17,6 @@ class FeatureBooksCubit extends Cubit<FeatureBooksState> {
     result.fold(
         (failure) => emit(FeatureBooksFailure(errMessage: failure.errMessage)),
         (books) {
-      print('i am here');
-      print(books);
       return emit(FeatureBooksSuccess(listBook: books));
     });
   }
