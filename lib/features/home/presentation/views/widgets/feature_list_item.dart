@@ -19,8 +19,9 @@ class FeatureBooksListView extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: CustomListViewItem(
-                        imageUrl: state
-                            .listBook[index].volumeInfo.imageLinks.thumbnail),
+                        imageUrl: state.listBook[index].volumeInfo.imageLinks
+                                ?.thumbnail ??
+                            ""),
                   );
                 });
           } else if (state is FeatureBooksFailure) {
