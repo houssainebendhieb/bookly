@@ -15,15 +15,15 @@ class BestSellerListView extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               itemCount: 10,
               itemBuilder: (context, index) {
-                return  Padding(
-                  padding:const  EdgeInsets.symmetric(vertical: 10),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   child: BestSellerItemList(bookModel: state.listBooks[index]),
                 );
               });
         } else if (state is NewsetBooksFailure) {
-          return Text(state.errMessage);
+          return Center(child: Text(state.errMessage));
         } else {
-          return const  Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

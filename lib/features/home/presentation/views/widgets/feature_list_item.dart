@@ -24,7 +24,7 @@ class FeatureBooksListView extends StatelessWidget {
                   );
                 });
           } else if (state is FeatureBooksFailure) {
-            return Text(state.errMessage);
+            return Center(child: Text(state.errMessage));
           } else {
             return const Center(
               child: CircularProgressIndicator(),

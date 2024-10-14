@@ -24,7 +24,7 @@ class ServerFailure extends Failure {
         return ServerFailure('Unknown Dio Error: ${dioException.message}');
 
       default:
-        return ServerFailure('Other Dio Error: ${dioException.message}');
+        return ServerFailure('No Internet Connection');
     }
   }
 
