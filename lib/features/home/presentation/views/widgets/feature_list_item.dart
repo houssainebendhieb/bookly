@@ -12,7 +12,7 @@ class FeatureBooksListView extends StatelessWidget {
         builder: (context, state) {
           if (state is FeatureBooksSuccess) {
             return ListView.builder(
-                physics: BouncingScrollPhysics(),
+                physics:const  BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemCount: state.listBook.length,
                 itemBuilder: (context, index) {
